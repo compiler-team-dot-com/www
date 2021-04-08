@@ -9,5 +9,5 @@ While the rest of the industry build and deploy software to be tested in the fie
 Our pragmatic approach results in systems that perform to specifications and can be deployed in high-risk environments."
 
 menu:
-    - {url: "https://github.com/compiler-team-dot-com", name: "GitHub"}
+    - {url: "https://github.com/compiler-team-dot-com", name: "GitHub", target: "_blank"}
 ---
