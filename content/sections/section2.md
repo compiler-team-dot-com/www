@@ -1,11 +1,11 @@
 ---
-title: "Links"
+title: "Newsletter"
 weight: 3
 improvecontrast: true
 ---
 
-## Download Grayscale
+## Sign up for our newsletter
 
-You can download Grayscale for free from the Github page.
+Get the latest news from the Compiler Team.
 
-{{< big-button text="Visit Download Page" href="https://github.com/runningstream/hugograyscale/" >}}
+{{< mailchimp >}}

@@ -3,10 +3,18 @@ title: "About"
 weight: 2
 ---
 
-## About Grayscale
+## About the Compiler Team
 
-Grayscale is a free Hugo theme, originally created for Bootstrap by Start Bootstrap. It can be yours right now, simply download the template from [the Github page](https://github.com/runningstream/hugograyscale/). The theme is open source, and you can use it for any purpose, personal or commercial.
+For small to medium businesses operating high-value computing systems, who
+cannot afford to introduce bugs but still need to iterate fast,
+we are experts in the construction of solutions that are correct by
+construction.
 
-This theme was adapted from a Jekyll version, brought to you by [Jerome Lachaud](https://github.com/jeromelachaud)
+Unlike the current state of affairs where software is deployed to be tested in
+the field, our application of state-of-the-art research on programming languages and
+compilers enable the introduction of software that is bug-free and perform
+to specification.
 
-This theme features stock photos by [Gratisography](http://gratisography.com/) along with a custom Google Maps skin courtesy of [Snazzy Maps](http://snazzymaps.com/).
+{{< socialhandles >}}
+    {{< github user="compiler-team-dot-com" >}}
+{{< /socialhandles >}}
