@@ -1,9 +1,9 @@
-baseURL = "https://www.compiler.team"
+baseURL = "https://compiler.team"
 languageCode = "en-us"
 title = "Compiler Team"
 theme = "hugograyscale"
 
-#googleAnalytics = ""
+googleAnalytics = ""
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
