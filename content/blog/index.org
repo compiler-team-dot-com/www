@@ -1,0 +1,3 @@
+#+TITLE: Sitemap for project blog
+
+- [[file:first-post.org][first-post]]
