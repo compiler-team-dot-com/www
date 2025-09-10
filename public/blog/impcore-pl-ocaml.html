@@ -43,9 +43,9 @@
 </head>
 <body>
 <div id="content" class="content">
-<div id="outline-container-orga4a4993" class="outline-2">
-<h2 id="orga4a4993">The Impcore language in OCaml</h2>
-<div class="outline-text-2" id="text-orga4a4993">
+<div id="outline-container-org3b2590b" class="outline-2">
+<h2 id="org3b2590b">The Impcore language in OCaml</h2>
+<div class="outline-text-2" id="text-org3b2590b">
 <p>
 Here.
 </p>
@@ -59,9 +59,9 @@ Some OCaml,
 </pre>
 </div>
 </div>
-<div id="outline-container-orgb31ec5b" class="outline-3">
-<h3 id="orgb31ec5b">Metavariables</h3>
-<div class="outline-text-3" id="text-orgb31ec5b">
+<div id="outline-container-org16061dd" class="outline-3">
+<h3 id="org16061dd">Metavariables</h3>
+<div class="outline-text-3" id="text-org16061dd">
 <p>
 x, <code>x</code> \(x_1\), \(x_1\).
 </p>
@@ -108,9 +108,9 @@ x, <code>x</code> \(x_1\), \(x_1\).
 </table>
 </div>
 </div>
-<div id="outline-container-org26a0b7d" class="outline-3">
-<h3 id="org26a0b7d">Environments</h3>
-<div class="outline-text-3" id="text-org26a0b7d">
+<div id="outline-container-orgc6c22ab" class="outline-3">
+<h3 id="orgc6c22ab">Environments</h3>
+<div class="outline-text-3" id="text-orgc6c22ab">
 <ul class="org-ul">
 <li>Environment \(\xi\) holds values for global variables.</li>
 <li>Environment \(\phi\) holds definitions of functions.</li>
@@ -120,6 +120,29 @@ x, <code>x</code> \(x_1\), \(x_1\).
 <p>
 Environments \(\xi\) and \(\phi\) are global and shared, but there is a distinct \(\rho\) for every function call. Together, their contents comprise Impcore's <i>basis</i>.
 </p>
+</div>
+<div id="outline-container-org7215bb1" class="outline-4">
+<h4 id="org7215bb1">Operating on environments</h4>
+<div class="outline-text-4" id="text-org7215bb1">
+<p>
+Using function notation:
+</p>
+
+<ul class="org-ul">
+<li>Whatever is associated with name \(x\) in the environment \(\rho\) is written \(\rho(x)\).</li>
+<li>The set of names bound in environment \(\rho\) is written \(\text{dom } \rho\).</li>
+<li>An <b>extended environment</b> \(\rho\), plus a binding of the name \(x\) to \(v\), is written \(\rho \{ x \mapsto v\}\).</li>
+<li>In an extended environment, the new binding hides previous bindings of \(x\):</li>
+</ul>
+
+\begin{array}
+$\rho\{ x \mapsto v \}(y) =
+  \begin{cases}
+  v, & \text{when $x = y$} \\
+  \rho(y), & \text{when $x \neq y$}
+  \end{cases}
+\end{array}
+</div>
 </div>
 </div>
 </div>

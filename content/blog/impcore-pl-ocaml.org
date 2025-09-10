@@ -29,3 +29,20 @@ x, =x= $x_1$, \(x_1\).
 - Environment $\rho$ holds values of a function's parameters.
 
 Environments $\xi$ and $\phi$ are global and shared, but there is a distinct $\rho$ for every function call. Together, their contents comprise Impcore's /basis/.
+
+*** Operating on environments
+
+Using function notation:
+
+- Whatever is associated with name $x$ in the environment $\rho$ is written $\rho(x)$.
+- The set of names bound in environment $\rho$ is written $\text{dom } \rho$.
+- An *extended environment* $\rho$, plus a binding of the name $x$ to $v$, is written $\rho \{ x \mapsto v\}$.
+- In an extended environment, the new binding hides previous bindings of $x$:
+
+\begin{array}
+$\rho\{ x \mapsto v \}(y) =
+  \begin{cases}
+  v, & \text{when $x = y$} \\
+  \rho(y), & \text{when $x \neq y$}
+  \end{cases}
+\end{array}
