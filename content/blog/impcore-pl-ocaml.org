@@ -47,3 +47,23 @@ $\rho\{ x \mapsto v \}(y) =
   \rho(y), & \text{when $x \neq y$}
   \end{cases}
 \end{array}
+
+** Operational Semantics
+An /abstract machine/ and rules for its execution.
+
+Metavariables of Impcore's operational semantics:
+
+| $e, e_i$              | An expression                                   |
+| $d$                   | A definition                                    |
+| $x, x_i$              | A name that refers to a variable or a parameter |
+| $f$                   | A name that refers to a function                |
+| $v, v_i$              | A value                                         |
+| $\xi, \xi', \ldots$   | A global-variable environment                   |
+| $\phi, \phi', \ldots$ | A function-definition environment               |
+| $\rho, \rho', \ldots$ | A formal-parameter environment                  |
+
+The states and transitions are described using the metavariables above.
+
+- Evaluating a definition $d$: $\langle d, \xi, \phi \rangle$ (definitions do not appear inside functions).
+- Evaluating an expression $e$: $\langle e, \xi, \phi, \rho \rangle$.
+- Between evaluations: $\langle \xi, \phi \rangle$.

@@ -43,9 +43,9 @@
 </head>
 <body>
 <div id="content" class="content">
-<div id="outline-container-orgb8c27ad" class="outline-2">
-<h2 id="orgb8c27ad">The Impcore language in OCaml</h2>
-<div class="outline-text-2" id="text-orgb8c27ad">
+<div id="outline-container-orgcb60fb0" class="outline-2">
+<h2 id="orgcb60fb0">The Impcore language in OCaml</h2>
+<div class="outline-text-2" id="text-orgcb60fb0">
 <p>
 Here.
 </p>
@@ -59,9 +59,9 @@ Some OCaml,
 </pre>
 </div>
 </div>
-<div id="outline-container-org953be89" class="outline-3">
-<h3 id="org953be89">Metavariables</h3>
-<div class="outline-text-3" id="text-org953be89">
+<div id="outline-container-org7bac05f" class="outline-3">
+<h3 id="org7bac05f">Metavariables</h3>
+<div class="outline-text-3" id="text-org7bac05f">
 <p>
 x, <code>x</code> \(x_1\), \(x_1\).
 </p>
@@ -108,9 +108,9 @@ x, <code>x</code> \(x_1\), \(x_1\).
 </table>
 </div>
 </div>
-<div id="outline-container-org10d13a7" class="outline-3">
-<h3 id="org10d13a7">Environments</h3>
-<div class="outline-text-3" id="text-org10d13a7">
+<div id="outline-container-orgc444744" class="outline-3">
+<h3 id="orgc444744">Environments</h3>
+<div class="outline-text-3" id="text-orgc444744">
 <ul class="org-ul">
 <li>Environment \(\xi\) holds values for global variables.</li>
 <li>Environment \(\phi\) holds definitions of functions.</li>
@@ -121,9 +121,9 @@ x, <code>x</code> \(x_1\), \(x_1\).
 Environments \(\xi\) and \(\phi\) are global and shared, but there is a distinct \(\rho\) for every function call. Together, their contents comprise Impcore's <i>basis</i>.
 </p>
 </div>
-<div id="outline-container-orgd048518" class="outline-4">
-<h4 id="orgd048518">Operating on environments</h4>
-<div class="outline-text-4" id="text-orgd048518">
+<div id="outline-container-orgd64a613" class="outline-4">
+<h4 id="orgd64a613">Operating on environments</h4>
+<div class="outline-text-4" id="text-orgd64a613">
 <p>
 Using function notation:
 </p>
@@ -144,6 +144,79 @@ $\rho\{ x \mapsto v \}(y) =
   \end{cases}
 \end{array}
 </div>
+</div>
+</div>
+<div id="outline-container-org90807b1" class="outline-3">
+<h3 id="org90807b1">Operational Semantics</h3>
+<div class="outline-text-3" id="text-org90807b1">
+<p>
+An <i>abstract machine</i> and rules for its execution.
+</p>
+
+<p>
+Metavariables of Impcore's operational semantics:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">\(e, e_i\)</td>
+<td class="org-left">An expression</td>
+</tr>
+
+<tr>
+<td class="org-left">\(d\)</td>
+<td class="org-left">A definition</td>
+</tr>
+
+<tr>
+<td class="org-left">\(x, x_i\)</td>
+<td class="org-left">A name that refers to a variable or a parameter</td>
+</tr>
+
+<tr>
+<td class="org-left">\(f\)</td>
+<td class="org-left">A name that refers to a function</td>
+</tr>
+
+<tr>
+<td class="org-left">\(v, v_i\)</td>
+<td class="org-left">A value</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\xi, \xi', \ldots\)</td>
+<td class="org-left">A global-variable environment</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\phi, \phi', \ldots\)</td>
+<td class="org-left">A function-definition environment</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\rho, \rho', \ldots\)</td>
+<td class="org-left">A formal-parameter environment</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The states and transitions are described using the metavariables above.
+</p>
+
+<ul class="org-ul">
+<li>Evaluating a definition \(d\): \(\langle d, \xi, \phi \rangle\) (definitions do not appear inside functions).</li>
+<li>Evaluating an expression \(e\): \(\langle e, \xi, \phi, \rho \rangle\).</li>
+<li>Between evaluations: \(\langle \xi, \phi \rangle\).</li>
+</ul>
 </div>
 </div>
 </div>
