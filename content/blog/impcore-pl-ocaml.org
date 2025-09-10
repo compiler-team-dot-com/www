@@ -34,6 +34,7 @@ Environments $\xi$ and $\phi$ are global and shared, but there is a distinct $\r
 
 Using function notation:
 
+- An empty environment, which does not bind any names, is written $\{\}$.
 - Whatever is associated with name $x$ in the environment $\rho$ is written $\rho(x)$.
 - The set of names bound in environment $\rho$ is written $\text{dom } \rho$.
 - An *extended environment* $\rho$, plus a binding of the name $x$ to $v$, is written $\rho \{ x \mapsto v\}$.
