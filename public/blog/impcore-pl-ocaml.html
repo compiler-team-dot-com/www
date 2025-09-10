@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="outline-container-orga4a4993" class="outline-2">
+<h2 id="orga4a4993">The Impcore language in OCaml</h2>
+<div class="outline-text-2" id="text-orga4a4993">
+<p>
+Here.
+</p>
+
+<p>
+Some OCaml,
+</p>
+
+<div class="org-src-container">
+<pre class="src src-ocaml">let x = 42 in x
+</pre>
+</div>
+</div>
+<div id="outline-container-orgb31ec5b" class="outline-3">
+<h3 id="orgb31ec5b">Metavariables</h3>
+<div class="outline-text-3" id="text-orgb31ec5b">
+<p>
+x, <code>x</code> \(x_1\), \(x_1\).
+</p>
+
+\begin{array}{cc}
+  a & b \\
+  c & c
+\end{array}
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">\(e\)</td>
+<td class="org-left">Any expression</td>
+</tr>
+
+<tr>
+<td class="org-left">\(d\)</td>
+<td class="org-left">Any definition</td>
+</tr>
+
+<tr>
+<td class="org-left">\(n\)</td>
+<td class="org-left">Any numeral</td>
+</tr>
+
+<tr>
+<td class="org-left">\(x\)</td>
+<td class="org-left">Any name that is meant to refer to variable or parameter</td>
+</tr>
+
+<tr>
+<td class="org-left">\(f\)</td>
+<td class="org-left">Any name that is meant to refer to a function</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org26a0b7d" class="outline-3">
+<h3 id="org26a0b7d">Environments</h3>
+<div class="outline-text-3" id="text-org26a0b7d">
+<ul class="org-ul">
+<li>Environment \(\xi\) holds values for global variables.</li>
+<li>Environment \(\phi\) holds definitions of functions.</li>
+<li>Environment \(\rho\) holds values of a function's parameters.</li>
+</ul>
+
+<p>
+Environments \(\xi\) and \(\phi\) are global and shared, but there is a distinct \(\rho\) for every function call. Together, their contents comprise Impcore's <i>basis</i>.
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

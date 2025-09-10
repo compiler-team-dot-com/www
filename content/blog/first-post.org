@@ -1,8 +1,0 @@
-* A first post
-Here.
-
-Some OCaml,
-
-#+begin_src
-let x = 42 in x
-#+end_src

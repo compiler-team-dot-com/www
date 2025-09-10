@@ -1,0 +1,31 @@
+* The Impcore language in OCaml
+Here.
+
+Some OCaml,
+
+#+begin_src ocaml
+let x = 42 in x
+#+end_src
+
+** Metavariables
+
+x, =x= $x_1$, \(x_1\).
+
+\begin{array}{cc}
+  a & b \\
+  c & c
+\end{array}
+
+| $e$ | Any expression                                           |
+| $d$ | Any definition                                           |
+| $n$ | Any numeral                                              |
+| $x$ | Any name that is meant to refer to variable or parameter |
+| $f$ | Any name that is meant to refer to a function            |
+
+** Environments
+
+- Environment $\xi$ holds values for global variables.
+- Environment $\phi$ holds definitions of functions.
+- Environment $\rho$ holds values of a function's parameters.
+
+Environments $\xi$ and $\phi$ are global and shared, but there is a distinct $\rho$ for every function call. Together, their contents comprise Impcore's /basis/.
