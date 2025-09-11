@@ -67,3 +67,8 @@ The states and transitions are described using the metavariables above.
 - Evaluating a definition $d$: $\langle d, \xi, \phi \rangle$ (definitions do not appear inside functions).
 - Evaluating an expression $e$: $\langle e, \xi, \phi, \rho \rangle$.
 - Between evaluations: $\langle \xi, \phi \rangle$.
+
+Environments $\xi$ and $\rho$ store values. Environment $\phi$ stores primitive functions and user-defined functions:
+
+- A primitive function is written as $\mathrm{PRIMITIVE}(\oplus)$, where $\oplus$ stands for a name like $+$, $=$ or $*$.
+- A user-defined function is written as $\mathrm{USER}(\langle x_1, \ldots , x_n \rangle , e)$, where the $x_i$'s are the formal parameters and $e$ is the body.
