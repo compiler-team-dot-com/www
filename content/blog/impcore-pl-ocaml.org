@@ -72,3 +72,44 @@ Environments $\xi$ and $\rho$ store values. Environment $\phi$ stores primitive 
 
 - A primitive function is written as $\mathrm{PRIMITIVE}(\oplus)$, where $\oplus$ stands for a name like $+$, $=$ or $*$.
 - A user-defined function is written as $\mathrm{USER}(\langle x_1, \ldots , x_n \rangle , e)$, where the $x_i$'s are the formal parameters and $e$ is the body.
+
+*** Judgements and rules of inference
+
+State transitions are described using /judgements/. A /judgement/ describes a relation, not a function. A language that permits ambiguity is /nondeterministic/. Impcore is deterministic.
+
+The /form/ of the judgement $\langle e\text{, } \xi \text{, } \phi \text{, } \rho \rangle \Downarrow \langle v \text{, } \xi' \text{, } \phi \text{, } \rho' \rangle$ tells us a few things:
+
+- Evaluating an expression always produces a value, unless the machine gets stuck.
+- Evaluating an expression might change the value of a global variable, or a formal parameter.
+- Evaluating an expression never adds or changes a function definition.
+
+All the required computation in one big step: /big-step/ semantics.
+
+The judgement for a definition: $\langle d \text{, } \xi \text{, } \phi \rangle \rightarrow \langle \xi' \text{, } \phi' \rangle$.
+
+To say which judgements describe real behaviours, an operational semantics uses /rules of inference/:
+
+\begin{array}{cr}
+\begin{prooftree}
+\AxiomC{$\textit{premises}$}
+\RightLabel{.}
+\UnaryInfC{$\textit{conclusion}$}
+\end{prooftree} &
+\textrm{(Name of Rule)}
+\end{array}
+
+Example:
+
+\begin{array}{cr}
+\begin{prooftree}
+\AxiomC{$\langle e_1, \xi, \phi, \rho \rangle \Downarrow \langle v_1, \xi', \phi, \rho' \rangle$}
+\AxiomC{$v_1 \neq 0$}
+\AxiomC{$\langle e_2, \xi', \phi, \rho' \rangle \Downarrow \langle v_2, \xi'', \phi, \rho'' \rangle$}
+\TrinaryInfC{$\langle \textrm{IF} (e_1, e_2, e_3), \xi, \phi, \rho \rangle \Downarrow \langle v_2, \xi'', \phi, \rho'' \rangle$}
+\end{prooftree} &
+\textrm{(IfTrue)}
+\end{array}
+
+- If $\langle e_1, \xi, \phi, \rho \rangle$ evaluates to some nonzero value $v_1$.
+- The expression $\textrm{IF} (e_1, e_2, e_3)$ evaluates to the result of evaluating $e_2$ in the environment produced by $e_1$ (including any side-effects).
+- $e_1$ is evaluated before $e_2$: Order of evaluation is determined not by the order in which the premises are written, but by the flow of data (the environments) through the computation.
