@@ -43,9 +43,9 @@
 </head>
 <body>
 <div id="content" class="content">
-<div id="outline-container-org31547fd" class="outline-2">
-<h2 id="org31547fd">The Impcore language in OCaml</h2>
-<div class="outline-text-2" id="text-org31547fd">
+<div id="outline-container-org4bda093" class="outline-2">
+<h2 id="org4bda093">The Impcore language in OCaml</h2>
+<div class="outline-text-2" id="text-org4bda093">
 <p>
 Here.
 </p>
@@ -59,9 +59,9 @@ Some OCaml,
 </pre>
 </div>
 </div>
-<div id="outline-container-org9e942bc" class="outline-3">
-<h3 id="org9e942bc">Metavariables</h3>
-<div class="outline-text-3" id="text-org9e942bc">
+<div id="outline-container-org703f4d2" class="outline-3">
+<h3 id="org703f4d2">Metavariables</h3>
+<div class="outline-text-3" id="text-org703f4d2">
 <p>
 x, <code>x</code> \(x_1\), \(x_1\).
 </p>
@@ -108,9 +108,9 @@ x, <code>x</code> \(x_1\), \(x_1\).
 </table>
 </div>
 </div>
-<div id="outline-container-org5ac68a3" class="outline-3">
-<h3 id="org5ac68a3">Environments</h3>
-<div class="outline-text-3" id="text-org5ac68a3">
+<div id="outline-container-org69e42fd" class="outline-3">
+<h3 id="org69e42fd">Environments</h3>
+<div class="outline-text-3" id="text-org69e42fd">
 <ul class="org-ul">
 <li>Environment \(\xi\) holds values for global variables.</li>
 <li>Environment \(\phi\) holds definitions of functions.</li>
@@ -121,9 +121,9 @@ x, <code>x</code> \(x_1\), \(x_1\).
 Environments \(\xi\) and \(\phi\) are global and shared, but there is a distinct \(\rho\) for every function call. Together, their contents comprise Impcore's <i>basis</i>.
 </p>
 </div>
-<div id="outline-container-org753b34d" class="outline-4">
-<h4 id="org753b34d">Operating on environments</h4>
-<div class="outline-text-4" id="text-org753b34d">
+<div id="outline-container-orgbc8ddb1" class="outline-4">
+<h4 id="orgbc8ddb1">Operating on environments</h4>
+<div class="outline-text-4" id="text-orgbc8ddb1">
 <p>
 Using function notation:
 </p>
@@ -146,11 +146,11 @@ $\rho\{ x \mapsto v \}(y) =
 </div>
 </div>
 </div>
-<div id="outline-container-org910ae1b" class="outline-3">
-<h3 id="org910ae1b">Operational Semantics</h3>
-<div class="outline-text-3" id="text-org910ae1b">
+<div id="outline-container-orga94d5e9" class="outline-3">
+<h3 id="orga94d5e9">Operational Semantics</h3>
+<div class="outline-text-3" id="text-orga94d5e9">
 <p>
-An <i>abstract machine</i> and rules for its execution.
+An <i>abstract machine</i> and rules for its execution. It is a <i>big-step</i>, <i>natural-deduction</i> semantics.
 </p>
 
 <p>
@@ -227,9 +227,9 @@ Environments \(\xi\) and \(\rho\) store values. Environment \(\phi\) stores prim
 <li>A user-defined function is written as \(\mathrm{USER}(\langle x_1, \ldots , x_n \rangle , e)\), where the \(x_i\)'s are the formal parameters and \(e\) is the body.</li>
 </ul>
 </div>
-<div id="outline-container-org386ba30" class="outline-4">
-<h4 id="org386ba30">Judgements and rules of inference</h4>
-<div class="outline-text-4" id="text-org386ba30">
+<div id="outline-container-orga0f8594" class="outline-4">
+<h4 id="orga0f8594">Judgements and rules of inference</h4>
+<div class="outline-text-4" id="text-orga0f8594">
 <p>
 State transitions are described using <i>judgements</i>. A <i>judgement</i> describes a relation, not a function. A language that permits ambiguity is <i>nondeterministic</i>. Impcore is deterministic.
 </p>

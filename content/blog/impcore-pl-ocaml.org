@@ -49,7 +49,7 @@ $\rho\{ x \mapsto v \}(y) =
 \end{array}
 
 ** Operational Semantics
-An /abstract machine/ and rules for its execution.
+An /abstract machine/ and rules for its execution. It is a /big-step/, /natural-deduction/ semantics.
 
 Metavariables of Impcore's operational semantics:
 
