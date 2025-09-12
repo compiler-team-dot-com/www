@@ -113,3 +113,67 @@ Example:
 - If $\langle e_1, \xi, \phi, \rho \rangle$ evaluates to some nonzero value $v_1$.
 - The expression $\textrm{IF} (e_1, e_2, e_3)$ evaluates to the result of evaluating $e_2$ in the environment produced by $e_1$ (including any side-effects).
 - $e_1$ is evaluated before $e_2$: Order of evaluation is determined not by the order in which the premises are written, but by the flow of data (the environments) through the computation.
+
+*** Literal values
+TODO
+
+*** Variables
+TODO
+
+*** Assignment
+TODO
+
+*** Control flow
+TODO
+
+*** Function application
+TODO
+
+**** User-defined functions
+TODO
+
+**** Pritimive functions
+TODO
+
+*** Rules for evaluating definitions
+TODO
+
+**** Variable definition
+TODO
+
+**** Function definition
+TODO
+
+**** Top-level expression
+TODO
+
+**** Extended definitions
+TODO
+
+** The interpreter
+TODO
+
+#+begin_quote
+A language is embodied by the data structures for its crucial abstractions (environments and abstract-syntax trees) and by the functions that evaluate expressions and definitions.
+#+end_quote
+
+#+caption: Correspondence between Impcore semantics and code
+| /Semantics/                                                                            | /Concept/               | /Interpreter/    |
+|--------------------------------------------------------------------------------------+-----------------------+----------------|
+| <20>                                                                                 |                       |                |
+| $d$                                                                                  | True definition       | $\mathtt{Def}$ |
+| $e$                                                                                  | Expression            |                |
+| $x, f$                                                                               | Name                  |                |
+| $v$                                                                                  | Value                 |                |
+| $\textrm{USER}(\cdots)$                                                              | Function              |                |
+| $\textrm{PRIMITIVE}(\oplus)$                                                         | Function              |                |
+| $\xi, \rho$                                                                          | Value environment     |                |
+| $\phi$                                                                               | Function environment  |                |
+| $\langle e, \xi, \phi, \rho \rangle \Downarrow \langle v, \xi', \phi, \rho' \rangle$ | Expression evaluation |                |
+| $\langle d, \xi, \phi \rangle \rightarrow \langle \xi', \phi' \rangle$               | Definition evaluation |                |
+| $x \in \text{dom } \rho$                                                             | Definedness           |                |
+| $f \in \text{dom } \phi$                                                             | Definedness           |                |
+| $\rho(x), \xi(x)$                                                                    | Lookup                |                |
+| $\phi(x)$                                                                            | Lookup                |                |
+| $\rho\{ x \mapsto v \}$                                                              | Binding               |                |
+| $\phi\{ f \mapsto \cdots \}$                                                         | Binding               |                |

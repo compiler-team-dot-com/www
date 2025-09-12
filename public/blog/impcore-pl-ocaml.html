@@ -43,9 +43,9 @@
 </head>
 <body>
 <div id="content" class="content">
-<div id="outline-container-org4bda093" class="outline-2">
-<h2 id="org4bda093">The Impcore language in OCaml</h2>
-<div class="outline-text-2" id="text-org4bda093">
+<div id="outline-container-orga2671d0" class="outline-2">
+<h2 id="orga2671d0">The Impcore language in OCaml</h2>
+<div class="outline-text-2" id="text-orga2671d0">
 <p>
 Here.
 </p>
@@ -59,9 +59,9 @@ Some OCaml,
 </pre>
 </div>
 </div>
-<div id="outline-container-org703f4d2" class="outline-3">
-<h3 id="org703f4d2">Metavariables</h3>
-<div class="outline-text-3" id="text-org703f4d2">
+<div id="outline-container-org402d678" class="outline-3">
+<h3 id="org402d678">Metavariables</h3>
+<div class="outline-text-3" id="text-org402d678">
 <p>
 x, <code>x</code> \(x_1\), \(x_1\).
 </p>
@@ -108,9 +108,9 @@ x, <code>x</code> \(x_1\), \(x_1\).
 </table>
 </div>
 </div>
-<div id="outline-container-org69e42fd" class="outline-3">
-<h3 id="org69e42fd">Environments</h3>
-<div class="outline-text-3" id="text-org69e42fd">
+<div id="outline-container-org71187e8" class="outline-3">
+<h3 id="org71187e8">Environments</h3>
+<div class="outline-text-3" id="text-org71187e8">
 <ul class="org-ul">
 <li>Environment \(\xi\) holds values for global variables.</li>
 <li>Environment \(\phi\) holds definitions of functions.</li>
@@ -121,9 +121,9 @@ x, <code>x</code> \(x_1\), \(x_1\).
 Environments \(\xi\) and \(\phi\) are global and shared, but there is a distinct \(\rho\) for every function call. Together, their contents comprise Impcore's <i>basis</i>.
 </p>
 </div>
-<div id="outline-container-orgbc8ddb1" class="outline-4">
-<h4 id="orgbc8ddb1">Operating on environments</h4>
-<div class="outline-text-4" id="text-orgbc8ddb1">
+<div id="outline-container-org3c91904" class="outline-4">
+<h4 id="org3c91904">Operating on environments</h4>
+<div class="outline-text-4" id="text-org3c91904">
 <p>
 Using function notation:
 </p>
@@ -146,9 +146,9 @@ $\rho\{ x \mapsto v \}(y) =
 </div>
 </div>
 </div>
-<div id="outline-container-orga94d5e9" class="outline-3">
-<h3 id="orga94d5e9">Operational Semantics</h3>
-<div class="outline-text-3" id="text-orga94d5e9">
+<div id="outline-container-org6f7bbb4" class="outline-3">
+<h3 id="org6f7bbb4">Operational Semantics</h3>
+<div class="outline-text-3" id="text-org6f7bbb4">
 <p>
 An <i>abstract machine</i> and rules for its execution. It is a <i>big-step</i>, <i>natural-deduction</i> semantics.
 </p>
@@ -227,9 +227,9 @@ Environments \(\xi\) and \(\rho\) store values. Environment \(\phi\) stores prim
 <li>A user-defined function is written as \(\mathrm{USER}(\langle x_1, \ldots , x_n \rangle , e)\), where the \(x_i\)'s are the formal parameters and \(e\) is the body.</li>
 </ul>
 </div>
-<div id="outline-container-orga0f8594" class="outline-4">
-<h4 id="orga0f8594">Judgements and rules of inference</h4>
-<div class="outline-text-4" id="text-orga0f8594">
+<div id="outline-container-org475553d" class="outline-4">
+<h4 id="org475553d">Judgements and rules of inference</h4>
+<div class="outline-text-4" id="text-org475553d">
 <p>
 State transitions are described using <i>judgements</i>. A <i>judgement</i> describes a relation, not a function. A language that permits ambiguity is <i>nondeterministic</i>. Impcore is deterministic.
 </p>
@@ -285,6 +285,230 @@ Example:
 <li>\(e_1\) is evaluated before \(e_2\): Order of evaluation is determined not by the order in which the premises are written, but by the flow of data (the environments) through the computation.</li>
 </ul>
 </div>
+</div>
+<div id="outline-container-orgd4ee4c3" class="outline-4">
+<h4 id="orgd4ee4c3">Literal values</h4>
+<div class="outline-text-4" id="text-orgd4ee4c3">
+<p>
+TODO
+</p>
+</div>
+</div>
+<div id="outline-container-org7c12292" class="outline-4">
+<h4 id="org7c12292">Variables</h4>
+<div class="outline-text-4" id="text-org7c12292">
+<p>
+TODO
+</p>
+</div>
+</div>
+<div id="outline-container-org507fc94" class="outline-4">
+<h4 id="org507fc94">Assignment</h4>
+<div class="outline-text-4" id="text-org507fc94">
+<p>
+TODO
+</p>
+</div>
+</div>
+<div id="outline-container-orga86200f" class="outline-4">
+<h4 id="orga86200f">Control flow</h4>
+<div class="outline-text-4" id="text-orga86200f">
+<p>
+TODO
+</p>
+</div>
+</div>
+<div id="outline-container-orgc0d84dd" class="outline-4">
+<h4 id="orgc0d84dd">Function application</h4>
+<div class="outline-text-4" id="text-orgc0d84dd">
+<p>
+TODO
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org5a903e7"></a>User-defined functions<br />
+<div class="outline-text-5" id="text-org5a903e7">
+<p>
+TODO
+</p>
+</div>
+</li>
+<li><a id="org2084816"></a>Pritimive functions<br />
+<div class="outline-text-5" id="text-org2084816">
+<p>
+TODO
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgaf08f1d" class="outline-4">
+<h4 id="orgaf08f1d">Rules for evaluating definitions</h4>
+<div class="outline-text-4" id="text-orgaf08f1d">
+<p>
+TODO
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orgcf819f3"></a>Variable definition<br />
+<div class="outline-text-5" id="text-orgcf819f3">
+<p>
+TODO
+</p>
+</div>
+</li>
+<li><a id="org47a3e42"></a>Function definition<br />
+<div class="outline-text-5" id="text-org47a3e42">
+<p>
+TODO
+</p>
+</div>
+</li>
+<li><a id="org95704cc"></a>Top-level expression<br />
+<div class="outline-text-5" id="text-org95704cc">
+<p>
+TODO
+</p>
+</div>
+</li>
+<li><a id="orga7eb825"></a>Extended definitions<br />
+<div class="outline-text-5" id="text-orga7eb825">
+<p>
+TODO
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org588f9cf" class="outline-3">
+<h3 id="org588f9cf">The interpreter</h3>
+<div class="outline-text-3" id="text-org588f9cf">
+<p>
+TODO
+</p>
+
+<blockquote>
+<p>
+A language is embodied by the data structures for its crucial abstractions (environments and abstract-syntax trees) and by the functions that evaluate expressions and definitions.
+</p>
+</blockquote>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Correspondence between Impcore semantics and code</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><i>Semantics</i></th>
+<th scope="col" class="org-left"><i>Concept</i></th>
+<th scope="col" class="org-left"><i>Interpreter</i></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(d\)</td>
+<td class="org-left">True definition</td>
+<td class="org-left">\(\mathtt{Def}\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(e\)</td>
+<td class="org-left">Expression</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(x, f\)</td>
+<td class="org-left">Name</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(v\)</td>
+<td class="org-left">Value</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\textrm{USER}(\cdots)\)</td>
+<td class="org-left">Function</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\textrm{PRIMITIVE}(\oplus)\)</td>
+<td class="org-left">Function</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\xi, \rho\)</td>
+<td class="org-left">Value environment</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\phi\)</td>
+<td class="org-left">Function environment</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\langle e, \xi, \phi, \rho \rangle \Downarrow \langle v, \xi', \phi, \rho' \rangle\)</td>
+<td class="org-left">Expression evaluation</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\langle d, \xi, \phi \rangle \rightarrow \langle \xi', \phi' \rangle\)</td>
+<td class="org-left">Definition evaluation</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(x \in \text{dom } \rho\)</td>
+<td class="org-left">Definedness</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(f \in \text{dom } \phi\)</td>
+<td class="org-left">Definedness</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\rho(x), \xi(x)\)</td>
+<td class="org-left">Lookup</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\phi(x)\)</td>
+<td class="org-left">Lookup</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\rho\{ x \mapsto v \}\)</td>
+<td class="org-left">Binding</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\phi\{ f \mapsto \cdots \}\)</td>
+<td class="org-left">Binding</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
